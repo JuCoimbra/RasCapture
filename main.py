@@ -1,7 +1,7 @@
 import  urllib.request
 import cv2
 import numpy as np
-import urllib3
+import databaselib
 
 
 #Lê a URL da imagem e carrega com urllib3
@@ -31,3 +31,17 @@ imageArray = np.array(bytearray(loadURLImage.read()), dtype=np.uint8)
 image = cv2.imdecode(imageArray, -1)
 cv2.imshow('image', image)
 cv2.waitKey()
+
+#Código de tratamento da imagem
+
+#Cração da tabela car_table. Não precisa usar, já está criado
+#databaselib.createTable("DBPlacas.db")
+
+#Apaga todas as tuplas da tabela car_table. Descomentar caso for usar
+#deletCar_table("DBPlacas.db")
+
+#Inserindo dados no banco de dados. Parametros: Placa do carro e nome do banco. Está comentado pois não tem as informações ainda
+#idDataPlaca = databaselib.stringTratment(placa, localidade, "DBPlacas.db")
+
+#Mostra em tela a placa e o id do resgistro no banco de dados. Comentado pois não tem os valores necessários ainda.
+#print('O veiculo de placa '+ placa +' foi inserido na posição'+ idDataPlaca +'.')
