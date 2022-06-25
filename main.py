@@ -47,7 +47,7 @@ placa = pytesseract.image_to_string(Image.open("placa.jpg"), config = custom_con
 print(" A placa analisada na imagem é: " + placa)
 
 #OBS: o sistema funciona a partir de imagens em formato png ou jpeg e lendo placas do formato anterior a do Mercosul, devido a 
-modificação da aparencia dos caracteres na plca (possuem muito mais interferência)
+#modificação da aparencia dos caracteres na plca (possuem muito mais interferência)
 
 #Cração da tabela car_table. Não precisa usar, já está criado
 databaselib.createTable("DBPlacas.db")
