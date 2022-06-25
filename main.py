@@ -53,12 +53,13 @@ cinza = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
 #a thresh binary binariza a imagem, transformando-a
 #em preto e branco e a otsu elima as interferências/ruídos na imagem
-final = cv2.threshold(cinza, 0, 255,cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
-cv2.imshow("Otsu", final)                                                       
+blur=cv2.GaussianBlur(cinza,(3,3),0)
+final = cv2.threshold(blur, 0, 255,cv2.THRESH_BINARY_INV | cv2.THRESH_OTSU)[1]
+cv2.imshow("final", final)                                                       
 
 #Configuração da forma de leitura dos caracteres, de forma que leia números e letras, a partir da função custom_config
 
-custom_config = r'-c tessedit_char_blacklist=abcdefghijklmnopqrstuvwxyz/ --psm 6'
+custom_config = r'-c tessedit_char_blacklist=abcdefghijklmnopqrstuvwxyz'
 
 #A imagem depois de todo tratamento será escrita para ser lida pela biblioteca Tesseract
 cv2.imwrite("placa.jpg", final)
