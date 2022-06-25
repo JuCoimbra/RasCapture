@@ -56,7 +56,7 @@ databaselib.createTable("DBPlacas.db")
 deletCar_table("DBPlacas.db")
 
 #Inserindo dados no banco de dados. Parametros: Placa do carro e nome do banco.
-idDataPlaca = databaselib.stringTratment(placa, "DBPlacas.db")
+idDataPlaca = databaselib.stringTratment(placa, 'Brasil', "DBPlacas.db")
 
 #Mostra em tela a placa e o id do resgistro no banco de dados.
 print('O veiculo de placa '+ placa +' foi inserido na posição'+ idDataPlaca +'.')
