@@ -43,20 +43,20 @@ cv2.imwrite("placa.jpg", final)
 pytesseract.pytesseract.tesseract_cmd = "C:/Program Files/Tesseract-OCR/tesseract.exe"
 
 #Por fim, usando a função image_to_string a mensagem pode ser lida e depois printada na tela
-caracteres = pytesseract.image_to_string(Image.open("placa.jpg"), config = custom_config)
-print(" A placa analisada na imagem é: " + caracteres)
+placa = pytesseract.image_to_string(Image.open("placa.jpg"), config = custom_config)
+print(" A placa analisada na imagem é: " + placa)
 
 #OBS: o sistema funciona a partir de imagens em formato png ou jpeg e lendo placas do formato anterior a do Mercosul, devido a 
-#modificação da aparencia dos caracteres na plca (possuem muito mais interferência)
+modificação da aparencia dos caracteres na plca (possuem muito mais interferência)
 
 #Cração da tabela car_table. Não precisa usar, já está criado
-#databaselib.createTable("DBPlacas.db")
+databaselib.createTable("DBPlacas.db")
 
-#Apaga todas as tuplas da tabela car_table. Descomentar caso for usar
-#deletCar_table("DBPlacas.db")
+#Apaga todas as tuplas da tabela car_table. 
+deletCar_table("DBPlacas.db")
 
-#Inserindo dados no banco de dados. Parametros: Placa do carro e nome do banco. Está comentado pois não tem as informações ainda
-#idDataPlaca = databaselib.stringTratment(placa, localidade, "DBPlacas.db")
+#Inserindo dados no banco de dados. Parametros: Placa do carro e nome do banco.
+idDataPlaca = databaselib.stringTratment(placa, "DBPlacas.db")
 
-#Mostra em tela a placa e o id do resgistro no banco de dados. Comentado pois não tem os valores necessários ainda.
-#print('O veiculo de placa '+ placa +' foi inserido na posição'+ idDataPlaca +'.')
+#Mostra em tela a placa e o id do resgistro no banco de dados.
+print('O veiculo de placa '+ placa +' foi inserido na posição'+ idDataPlaca +'.')
