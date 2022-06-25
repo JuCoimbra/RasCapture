@@ -5,7 +5,7 @@ from PIL import Image  #voltada para manipulação de imagens em outros formatos
 import databaselib #Biblioteca criada para o banco de dados
 
 print('''Seja bem-vindo(a). Esse programa lê imagens com placas antigas e armazena seus dados em um banco de dados.\n
-    Ao longo do programa a imagem selecionada ira ser mostrada em tela, de forma que, para sair da imagem, você deve clicar
+    A imagem da placa ira ser mostrada em tela, de forma que, para sair da imagem, você deve clicar
     em qualquer tecla. Vamos começar.''')
 image= cv2.imread('placa1.jpeg') 
 cv2.imshow('Image', image)
