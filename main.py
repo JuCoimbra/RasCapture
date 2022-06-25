@@ -3,7 +3,6 @@ import numpy as np
 import pytesseract #consegue ler os caracteres da imagem
 from PIL import Image  #voltada para manipulação de imagens em outros formatos como png
 import databaselib #Biblioteca criada para o banco de dados
-import sys #Para forçar a saida do programa
 
 print('''Seja bem-vindo(a). Esse programa lê imagens com placas antigas e armazena seus dados em um banco de dados.\n
     Ao longo do programa a imagem selecionada ira ser mostrada em tela, de forma que, para sair da imagem, você deve clicar
