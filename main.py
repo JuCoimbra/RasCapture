@@ -53,7 +53,7 @@ print(" A placa analisada na imagem é: " + placa)
 databaselib.createTable("DBPlacas.db")
 
 #Apaga todas as tuplas da tabela car_table. 
-deletCar_table("DBPlacas.db")
+#deletCar_table("DBPlacas.db")
 
 #Inserindo dados no banco de dados. Parametros: Placa do carro e nome do banco.
 idDataPlaca = databaselib.stringTratment(placa, 'Brasil', "DBPlacas.db")
